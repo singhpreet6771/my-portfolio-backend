@@ -12,6 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
+app.get("/", (req, res) => {res.status(200).send("Welcome to Gurpreet Singh's portfolio backend!")})
 app.use("/project", require("./routes/projects"));
 app.use("/experience", require("./routes/experience"));
 app.use("/education", require("./routes/education"));
